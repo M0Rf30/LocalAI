@@ -8263,13 +8263,20 @@
     - filename: L3-Nymeria-Maid-8B.Q4_K_M.gguf
       sha256: 05bce561daa59b38cf9b79973c3b1e2e27af6d1e8e41570760af54800a09bcc2
       uri: huggingface://QuantFactory/L3-Nymeria-Maid-8B-GGUF/L3-Nymeria-Maid-8B.Q4_K_M.gguf
-- !!merge <<: *llama3
-  name: "italia-9b-instruct-v0.1"
+- &italia-vllm
+  url: "github:mudler/LocalAI/gallery/italia-vllm.yaml@feat/igenius-italia-9b"
+  name: "italia-9b-instruct-v0.1:vllm"
   icon: https://cdn.prod.website-files.com/650a9755f11b20f057c78e52/666c3554b3b2b87c59bd744e_666156724e914be6b8bb0ad9_modello-italia-launch-cover.jpeg
+  tags:
+    - llm
+    - vllm
+    - gpu
+    - function-calling
+    - italian
+  license: mit
   urls:
     - https://huggingface.co/iGeniusAI/Italia-9B-Instruct-v0.1
     - https://huggingface.co/fbaldassarri/modello-italia-9B-GGUF
-  license: mit
   description: |
     Italia is a family of Open Source large language models developed by iGenius, designed for companies operating in the public and private sectors.
     The first model in our series is Italia 9B, a foundational LLM with a 9-billion-parameter Transformer architecture, developed in collaboration with Cineca,
