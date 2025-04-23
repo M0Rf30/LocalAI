@@ -556,7 +556,8 @@
     - filename: amoral-gemma3-1B-v2.Q4_K_M.gguf
       sha256: 7f2167d91409cabaf0a42e41e833a6ca055c841a37d8d829e11db81fdaed5e4c
       uri: huggingface://mradermacher/amoral-gemma3-1B-v2-GGUF/amoral-gemma3-1B-v2.Q4_K_M.gguf
-- &llama4
+- !!merge <<: *llama4
+  name: "meta-llama_llama-4-scout-17b-16e-instruct"
   url: "github:mudler/LocalAI/gallery/llama3.1-instruct.yaml@master"
   icon: https://avatars.githubusercontent.com/u/153379578
   license: llama4
@@ -566,7 +567,6 @@
     - gpu
     - cpu
     - llama3.3
-  name: "meta-llama_llama-4-scout-17b-16e-instruct"
   urls:
     - https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct
     - https://huggingface.co/bartowski/meta-llama_Llama-4-Scout-17B-16E-Instruct-GGUF
