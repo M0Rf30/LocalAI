@@ -396,17 +396,17 @@
     - https://huggingface.co/soob3123/amoral-gemma3-12B-v2
     - https://huggingface.co/bartowski/soob3123_amoral-gemma3-12B-v2-GGUF
   description: |
-      Core Function:
+    Core Function:
 
-          Produces analytically neutral responses to sensitive queries
-          Maintains factual integrity on controversial subjects
-          Avoids value-judgment phrasing patterns
+        Produces analytically neutral responses to sensitive queries
+        Maintains factual integrity on controversial subjects
+        Avoids value-judgment phrasing patterns
 
-      Response Characteristics:
+    Response Characteristics:
 
-          No inherent moral framing ("evil slop" reduction)
-          Emotionally neutral tone enforcement
-          Epistemic humility protocols (avoids "thrilling", "wonderful", etc.)
+        No inherent moral framing ("evil slop" reduction)
+        Emotionally neutral tone enforcement
+        Epistemic humility protocols (avoids "thrilling", "wonderful", etc.)
   overrides:
     parameters:
       model: soob3123_amoral-gemma3-12B-v2-Q4_K_M.gguf
@@ -1609,13 +1609,13 @@
     - https://huggingface.co/deepcogito/cogito-v1-preview-llama-70B
     - https://huggingface.co/bartowski/deepcogito_cogito-v1-preview-llama-70B-GGUF
   description: |
-      The Cogito LLMs are instruction tuned generative models (text in/text out). All models are released under an open license for commercial use.
+    The Cogito LLMs are instruction tuned generative models (text in/text out). All models are released under an open license for commercial use.
 
-          Cogito models are hybrid reasoning models. Each model can answer directly (standard LLM), or self-reflect before answering (like reasoning models).
-          The LLMs are trained using Iterated Distillation and Amplification (IDA) - an scalable and efficient alignment strategy for superintelligence using iterative self-improvement.
-          The models have been optimized for coding, STEM, instruction following and general helpfulness, and have significantly higher multilingual, coding and tool calling capabilities than size equivalent counterparts.
-              In both standard and reasoning modes, Cogito v1-preview models outperform their size equivalent counterparts on common industry benchmarks.
-          Each model is trained in over 30 languages and supports a context length of 128k.
+        Cogito models are hybrid reasoning models. Each model can answer directly (standard LLM), or self-reflect before answering (like reasoning models).
+        The LLMs are trained using Iterated Distillation and Amplification (IDA) - an scalable and efficient alignment strategy for superintelligence using iterative self-improvement.
+        The models have been optimized for coding, STEM, instruction following and general helpfulness, and have significantly higher multilingual, coding and tool calling capabilities than size equivalent counterparts.
+            In both standard and reasoning modes, Cogito v1-preview models outperform their size equivalent counterparts on common industry benchmarks.
+        Each model is trained in over 30 languages and supports a context length of 128k.
   overrides:
     parameters:
       model: deepcogito_cogito-v1-preview-llama-70B-Q4_K_M.gguf
@@ -2079,7 +2079,7 @@
     - https://huggingface.co/ibm-granite/granite-3.3-2b-instruct
     - https://huggingface.co/bartowski/ibm-granite_granite-3.3-8b-instruct-GGUF
   description: |
-      Granite-3.3-2B-Instruct is a 2-billion parameter 128K context length language model fine-tuned for improved reasoning and instruction-following capabilities. Built on top of Granite-3.3-2B-Base, the model delivers significant gains on benchmarks for measuring generic performance including AlpacaEval-2.0 and Arena-Hard, and improvements in mathematics, coding, and instruction following. It supports structured reasoning through <think></think> and <response></response> tags, providing clear separation between internal thoughts and final outputs. The model has been trained on a carefully balanced combination of permissively licensed data and curated synthetic tasks.
+    Granite-3.3-2B-Instruct is a 2-billion parameter 128K context length language model fine-tuned for improved reasoning and instruction-following capabilities. Built on top of Granite-3.3-2B-Base, the model delivers significant gains on benchmarks for measuring generic performance including AlpacaEval-2.0 and Arena-Hard, and improvements in mathematics, coding, and instruction following. It supports structured reasoning through <think></think> and <response></response> tags, providing clear separation between internal thoughts and final outputs. The model has been trained on a carefully balanced combination of permissively licensed data and curated synthetic tasks.
   overrides:
     parameters:
       model: ibm-granite_granite-3.3-8b-instruct-Q4_K_M.gguf
@@ -2093,7 +2093,7 @@
     - https://huggingface.co/ibm-granite/granite-3.3-2b-instruct
     - https://huggingface.co/bartowski/ibm-granite_granite-3.3-2b-instruct-GGUF
   description: |
-     Granite-3.3-2B-Instruct is a 2-billion parameter 128K context length language model fine-tuned for improved reasoning and instruction-following capabilities. Built on top of Granite-3.3-2B-Base, the model delivers significant gains on benchmarks for measuring generic performance including AlpacaEval-2.0 and Arena-Hard, and improvements in mathematics, coding, and instruction following. It supports structured reasoning through <think></think> and <response></response> tags, providing clear separation between internal thoughts and final outputs. The model has been trained on a carefully balanced combination of permissively licensed data and curated synthetic tasks.
+    Granite-3.3-2B-Instruct is a 2-billion parameter 128K context length language model fine-tuned for improved reasoning and instruction-following capabilities. Built on top of Granite-3.3-2B-Base, the model delivers significant gains on benchmarks for measuring generic performance including AlpacaEval-2.0 and Arena-Hard, and improvements in mathematics, coding, and instruction following. It supports structured reasoning through <think></think> and <response></response> tags, providing clear separation between internal thoughts and final outputs. The model has been trained on a carefully balanced combination of permissively licensed data and curated synthetic tasks.
   overrides:
     parameters:
       model: ibm-granite_granite-3.3-2b-instruct-Q4_K_M.gguf
@@ -2814,7 +2814,7 @@
     - https://huggingface.co/Menlo/ReZero-v0.1-llama-3.2-3b-it-grpo-250404
     - https://huggingface.co/bartowski/Menlo_ReZero-v0.1-llama-3.2-3b-it-grpo-250404-GGUF
   description: |
-      ReZero trains a small language model to develop effective search behaviors instead of memorizing static data. It interacts with multiple synthetic search engines, each with unique retrieval mechanisms, to refine queries and persist in searching until it finds exact answers. The project focuses on reinforcement learning, preventing overfitting, and optimizing for efficiency in real-world search applications.
+    ReZero trains a small language model to develop effective search behaviors instead of memorizing static data. It interacts with multiple synthetic search engines, each with unique retrieval mechanisms, to refine queries and persist in searching until it finds exact answers. The project focuses on reinforcement learning, preventing overfitting, and optimizing for efficiency in real-world search applications.
   overrides:
     parameters:
       model: Menlo_ReZero-v0.1-llama-3.2-3b-it-grpo-250404-Q4_K_M.gguf
@@ -5620,12 +5620,12 @@
     - https://huggingface.co/Tesslate/Tessa-T1-32B
     - https://huggingface.co/bartowski/Tesslate_Tessa-T1-32B-GGUF
   description: |
-   Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-32B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
-    Model Highlights
+    Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-32B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
+     Model Highlights
 
-        React-specific Reasoning: Accurately generates functional and semantic React components.
-        Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
-        Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
+         React-specific Reasoning: Accurately generates functional and semantic React components.
+         Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
+         Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
   overrides:
     parameters:
       model: Tesslate_Tessa-T1-32B-Q4_K_M.gguf
@@ -5640,12 +5640,12 @@
     - https://huggingface.co/Tesslate/Tessa-T1-14B
     - https://huggingface.co/bartowski/Tesslate_Tessa-T1-14B-GGUF
   description: |
-   Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-14B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
-    Model Highlights
+    Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-14B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
+     Model Highlights
 
-        React-specific Reasoning: Accurately generates functional and semantic React components.
-        Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
-        Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
+         React-specific Reasoning: Accurately generates functional and semantic React components.
+         Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
+         Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
   overrides:
     parameters:
       model: Tesslate_Tessa-T1-14B-Q4_K_M.gguf
@@ -5660,12 +5660,12 @@
     - https://huggingface.co/Tesslate/Tessa-T1-7B
     - https://huggingface.co/bartowski/Tesslate_Tessa-T1-7B-GGUF
   description: |
-   Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-7B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
-    Model Highlights
+    Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-7B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
+     Model Highlights
 
-        React-specific Reasoning: Accurately generates functional and semantic React components.
-        Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
-        Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
+         React-specific Reasoning: Accurately generates functional and semantic React components.
+         Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
+         Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
   overrides:
     parameters:
       model: Tesslate_Tessa-T1-7B-Q4_K_M.gguf
@@ -5680,12 +5680,12 @@
     - https://huggingface.co/Tesslate/Tessa-T1-3B
     - https://huggingface.co/bartowski/Tesslate_Tessa-T1-3B-GGUF
   description: |
-   Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-3B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
-    Model Highlights
+    Tessa-T1 is an innovative transformer-based React reasoning model, fine-tuned from the powerful Qwen2.5-Coder-3B-Instruct base model. Designed specifically for React frontend development, Tessa-T1 leverages advanced reasoning to autonomously generate well-structured, semantic React components. Its integration into agent systems makes it a powerful tool for automating web interface development and frontend code intelligence.
+     Model Highlights
 
-        React-specific Reasoning: Accurately generates functional and semantic React components.
-        Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
-        Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
+         React-specific Reasoning: Accurately generates functional and semantic React components.
+         Agent Integration: Seamlessly fits into AI-driven coding agents and autonomous frontend systems.
+         Context-Aware Generation: Effectively understands and utilizes UI context to provide relevant code solutions.
   overrides:
     parameters:
       model: Tesslate_Tessa-T1-3B-Q4_K_M.gguf
@@ -5974,12 +5974,12 @@
     - https://huggingface.co/deepcogito/cogito-v1-preview-qwen-14B
     - https://huggingface.co/NikolayKozloff/cogito-v1-preview-qwen-14B-Q4_K_M-GGUF
   description: |
-      The Cogito LLMs are instruction tuned generative models (text in/text out). All models are released under an open license for commercial use.
-      Cogito models are hybrid reasoning models. Each model can answer directly (standard LLM), or self-reflect before answering (like reasoning models).
-      The LLMs are trained using Iterated Distillation and Amplification (IDA) - an scalable and efficient alignment strategy for superintelligence using iterative self-improvement.
-      The models have been optimized for coding, STEM, instruction following and general helpfulness, and have significantly higher multilingual, coding and tool calling capabilities than size equivalent counterparts.
-          In both standard and reasoning modes, Cogito v1-preview models outperform their size equivalent counterparts on common industry benchmarks.
-      Each model is trained in over 30 languages and supports a context length of 128k.
+    The Cogito LLMs are instruction tuned generative models (text in/text out). All models are released under an open license for commercial use.
+    Cogito models are hybrid reasoning models. Each model can answer directly (standard LLM), or self-reflect before answering (like reasoning models).
+    The LLMs are trained using Iterated Distillation and Amplification (IDA) - an scalable and efficient alignment strategy for superintelligence using iterative self-improvement.
+    The models have been optimized for coding, STEM, instruction following and general helpfulness, and have significantly higher multilingual, coding and tool calling capabilities than size equivalent counterparts.
+        In both standard and reasoning modes, Cogito v1-preview models outperform their size equivalent counterparts on common industry benchmarks.
+    Each model is trained in over 30 languages and supports a context length of 128k.
   overrides:
     parameters:
       model: cogito-v1-preview-qwen-14b-q4_k_m.gguf
@@ -8825,10 +8825,10 @@
     - https://huggingface.co/ReadyArt/Thoughtless-Fallen-Abomination-70B-R1-v4.1
     - https://huggingface.co/mradermacher/Thoughtless-Fallen-Abomination-70B-R1-v4.1-i1-GGUF
   description: |
-      ReadyArt/Thoughtless-Fallen-Abomination-70B-R1-v4.1 benefits from the coherence and well rounded roleplay experience of TheDrummer/Fallen-Llama-3.3-R1-70B-v1. We've:
-          🔁 Re-integrated your favorite V1.2 scenarios (now with better kink distribution)
-          🧪 Direct-injected the Abomination dataset into the model's neural pathways
-          ⚖️ Achieved perfect balance between "oh my" and "oh my"
+    ReadyArt/Thoughtless-Fallen-Abomination-70B-R1-v4.1 benefits from the coherence and well rounded roleplay experience of TheDrummer/Fallen-Llama-3.3-R1-70B-v1. We've:
+        🔁 Re-integrated your favorite V1.2 scenarios (now with better kink distribution)
+        🧪 Direct-injected the Abomination dataset into the model's neural pathways
+        ⚖️ Achieved perfect balance between "oh my" and "oh my"
   overrides:
     parameters:
       model: Thoughtless-Fallen-Abomination-70B-R1-v4.1.i1-Q4_K_M.gguf
@@ -8843,10 +8843,10 @@
     - https://huggingface.co/ReadyArt/Fallen-Safeword-70B-R1-v4.1
     - https://huggingface.co/mradermacher/Fallen-Safeword-70B-R1-v4.1-GGUF
   description: |
-        ReadyArt/Fallen-Safeword-70B-R1-v4.1 isn't just a model - is the event horizon of depravity trained on TheDrummer/Fallen-Llama-3.3-R1-70B-v1. We've:
-            🔁 Re-integrated your favorite V1.2 scenarios (now with better kink distribution)
-            🧪 Direct-injected the Safeword dataset into the model's neural pathways
-            ⚖️ Achieved perfect balance between "oh my" and "oh my"
+    ReadyArt/Fallen-Safeword-70B-R1-v4.1 isn't just a model - is the event horizon of depravity trained on TheDrummer/Fallen-Llama-3.3-R1-70B-v1. We've:
+        🔁 Re-integrated your favorite V1.2 scenarios (now with better kink distribution)
+        🧪 Direct-injected the Safeword dataset into the model's neural pathways
+        ⚖️ Achieved perfect balance between "oh my" and "oh my"
   overrides:
     parameters:
       model: Fallen-Safeword-70B-R1-v4.1.Q4_K_M.gguf
@@ -16206,3 +16206,28 @@
     - filename: bark-small_weights-f16.bin
       uri: https://huggingface.co/Green-Sky/bark-ggml/resolve/main/bark-small_weights-f16.bin
       sha256: de1ece17e8319537b3a7909baebbd28affab23c942d5d57e648d622af4e2feaa
+- &bitnet
+  name: "bitnet-bt1.58-2b-4t"
+  icon: https://avatars.githubusercontent.com/u/6154722
+  url: "github:mudler/LocalAI/gallery/chatml.yaml@master"
+  license: mit
+  tags:
+    - llm
+    - gguf
+    - bitnet
+    - cpu
+    - gpu
+    - text-generation
+  urls:
+    - https://huggingface.co/microsoft/bitnet-b1.58-2B-4T
+    - https://huggingface.co/microsoft/bitnet-b1.58-2B-4T-gguf
+  description: |
+    BitNet b1.58 2B4T is the first open-source, native 1-bit Large Language Model (LLM) at the 2-billion parameter scale, developed by Microsoft Research.
+    Trained on a corpus of 4 trillion tokens, this model demonstrates that native 1-bit LLMs can achieve performance comparable to leading open-weight, full-precision models of similar size, while offering substantial advantages in computational efficiency (memory, energy, latency).
+  overrides:
+    parameters:
+      model: BitNet-b1.58-2B-4T.gguf
+  files:
+    - filename: BitNet-b1.58-2B-4T.gguf
+      sha256: 4221b252fdd5fd25e15847adfeb5ee88886506ba50b8a34548374492884c2162
+      uri: huggingface://microsoft/bitnet-b1.58-2B-4T-gguf/ggml-model-i2_s.gguf
