@@ -22,12 +22,12 @@ config_file: |
   # Example configuration for different model types:
   # For Whisper models:
   files:
-    - filename: "encoder.onnx"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/encoder.onnx"
-    - filename: "decoder.onnx"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/decoder.onnx"
+    - filename: "tiny.en-encoder.onnx"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-encoder.onnx"
+    - filename: "tiny.en-decoder.onnx"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-decoder.onnx"
     - filename: "tiny.en-tokens.txt"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tokens.txt"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-tokens.txt"
 
   # For Paraformer models:
   # files:
