@@ -566,13 +566,13 @@ func (c *ModelConfig) GuessUsecases(u ModelConfigUsecases) bool {
 		}
 	}
 	if (u & FLAG_TRANSCRIPT) == FLAG_TRANSCRIPT {
-		transcriptBackends := []string{"whisper", "sherpa-onnx"}
+		transcriptBackends := []string{"sherpa-onnx", "whisper"}
 		if !slices.Contains(transcriptBackends, c.Backend) {
 			return false
 		}
 	}
 	if (u & FLAG_TTS) == FLAG_TTS {
-		ttsBackends := []string{"bark-cpp", "piper", "transformers-musicgen", "sherpa-onnx"}
+		ttsBackends := []string{"bark-cpp", "piper", "sherpa-onnx", "transformers-musicgen"}
 		if !slices.Contains(ttsBackends, c.Backend) {
 			return false
 		}
