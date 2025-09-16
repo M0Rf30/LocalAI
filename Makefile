@@ -353,6 +353,9 @@ backends/whisper: docker-build-whisper docker-save-whisper build
 
 backends/silero-vad: docker-build-silero-vad docker-save-silero-vad build
 	./local-ai backends install "ocifile://$(abspath ./backend-images/silero-vad.tar)"
+backends/sherpa-onnx: docker-build-sherpa-onnx docker-save-sherpa-onnx build
+	./local-ai backends install "ocifile://$(abspath ./backend-images/sherpa-onnx.tar)"
+
 
 backends/local-store: docker-build-local-store docker-save-local-store build
 	./local-ai backends install "ocifile://$(abspath ./backend-images/local-store.tar)"
@@ -443,6 +446,12 @@ docker-save-huggingface: backend-images
 
 docker-save-local-store: backend-images
 	docker save local-ai-backend:local-store -o backend-images/local-store.tar
+docker-build-sherpa-onnx:
+		docker build --build-arg BUILD_TYPE=$(BUILD_TYPE) --build-arg BASE_IMAGE=$(BASE_IMAGE) -t local-ai-backend:sherpa-onnx -f backend/Dockerfile.golang --build-arg BACKEND=sherpa-onnx .
+
+
+docker-save-sherpa-onnx: backend-images
+		docker save local-ai-backend:sherpa-onnx -o backend-images/sherpa-onnx.tar
 
 docker-build-silero-vad:
 	docker build --build-arg BUILD_TYPE=$(BUILD_TYPE) --build-arg BASE_IMAGE=$(BASE_IMAGE) -t local-ai-backend:silero-vad -f backend/Dockerfile.golang --build-arg BACKEND=silero-vad .
