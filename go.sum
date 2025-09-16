@@ -372,6 +372,14 @@ github.com/jsummers/gobmp v0.0.0-20230614200233-a9de23ed2e25/go.mod h1:kLgvv7o6U
 github.com/jtolds/gls v4.20.0+incompatible h1:xdiiI2gbIgH/gLH7ADydsJ1uDOEzR8yvV7C0MuV77Wo=
 github.com/jtolds/gls v4.20.0+incompatible/go.mod h1:QJZ7F/aHp+rZTRtaJ1ow/lLfFfVYBRgL+9YlvaHOwJU=
 github.com/k0kubun/go-ansi v0.0.0-20180517002512-3bf9e2903213/go.mod h1:vNUNkEQ1e29fT/6vq2aBdFsgNPmy8qMdSay1npru+Sw=
+github.com/k2-fsa/sherpa-onnx-go v1.12.12 h1:jM0qed/KDA2JplmQZZ9IxdPkiXHYNI5Mfit8755V6sU=
+github.com/k2-fsa/sherpa-onnx-go v1.12.12/go.mod h1:B/ynRbVa5gpYoZYeYgY3zPi4MTfKk95UZueZDSIhbjk=
+github.com/k2-fsa/sherpa-onnx-go-linux v1.12.12 h1:5fJ3joj+xPofQTD4bUPGSM24SsOpp4hzpceLlKSrulY=
+github.com/k2-fsa/sherpa-onnx-go-linux v1.12.12/go.mod h1:NXEH2rsBgTdqY59YpPq6CtSBlBAXy/8a9FmpLERU97I=
+github.com/k2-fsa/sherpa-onnx-go-macos v1.12.12 h1:tZarTAZG6XP5pFyhOCyI+UGhqjSQsbwDtPmVr5klOB4=
+github.com/k2-fsa/sherpa-onnx-go-macos v1.12.12/go.mod h1:ZOhUAXC62Unj0ZNfu6zxSFKcW96aXf7P3BsqiUyOBbE=
+github.com/k2-fsa/sherpa-onnx-go-windows v1.12.12 h1:kyxK9IH0kM7h3Ka0MpfNAefxI+0gHElRs5kxdcB3jEY=
+github.com/k2-fsa/sherpa-onnx-go-windows v1.12.12/go.mod h1:5AX7TU8+P/gInjglY1ijtWUM2b8iyR0QX4yEngzMe64=
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/klauspost/compress v1.4.1/go.mod h1:RyIbtBH6LamlWaDj8nUwkbUhJ87Yi3uG0guNDohfE1A=

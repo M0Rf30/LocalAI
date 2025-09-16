@@ -29,6 +29,7 @@ require (
 	github.com/ipfs/go-log v1.0.5
 	github.com/jaypipes/ghw v0.19.1
 	github.com/joho/godotenv v1.5.1
+	github.com/k2-fsa/sherpa-onnx-go v1.12.12
 	github.com/klauspost/cpuid/v2 v2.2.10
 	github.com/libp2p/go-libp2p v0.43.0
 	github.com/mholt/archiver/v3 v3.5.1
@@ -58,6 +59,7 @@ require (
 	go.opentelemetry.io/otel/metric v1.38.0
 	go.opentelemetry.io/otel/sdk/metric v1.38.0
 	google.golang.org/grpc v1.67.1
+	google.golang.org/protobuf v1.36.8
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
 	oras.land/oras-go/v2 v2.6.0
@@ -96,6 +98,9 @@ require (
 	github.com/jeandeaual/go-locale v0.0.0-20250612000132-0ef82f21eade // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/jsummers/gobmp v0.0.0-20230614200233-a9de23ed2e25 // indirect
+	github.com/k2-fsa/sherpa-onnx-go-linux v1.12.12 // indirect
+	github.com/k2-fsa/sherpa-onnx-go-macos v1.12.12 // indirect
+	github.com/k2-fsa/sherpa-onnx-go-windows v1.12.12 // indirect
 	github.com/libp2p/go-yamux/v5 v5.0.1 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/moby/docker-image-spec v1.3.1 // indirect
@@ -146,7 +151,6 @@ require (
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/image v0.25.0 // indirect
 	golang.org/x/time v0.12.0 // indirect
-	google.golang.org/protobuf v1.36.8 // indirect
 )
 
 require (

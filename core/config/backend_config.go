@@ -566,7 +566,8 @@ func (c *ModelConfig) GuessUsecases(u ModelConfigUsecases) bool {
 		}
 	}
 	if (u & FLAG_TRANSCRIPT) == FLAG_TRANSCRIPT {
-		if c.Backend != "whisper" {
+		transcriptBackends := []string{"whisper", "sherpa-onnx"}
+		if !slices.Contains(transcriptBackends, c.Backend) {
 			return false
 		}
 	}
@@ -597,7 +598,8 @@ func (c *ModelConfig) GuessUsecases(u ModelConfigUsecases) bool {
 	}
 
 	if (u & FLAG_VAD) == FLAG_VAD {
-		if c.Backend != "silero-vad" {
+		vadBackends := []string{"silero-vad", "sherpa-onnx"}
+		if !slices.Contains(vadBackends, c.Backend) {
 			return false
 		}
 	}

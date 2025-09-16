@@ -1,0 +1,46 @@
+---
+name: "sherpa-onnx"
+description: "Speech recognition with Next-gen Kaldi and ONNX Runtime"
+license: "Apache 2.0"
+urls:
+  - "https://github.com/k2-fsa/sherpa-onnx"
+icon: "https://avatars.githubusercontent.com/u/71431748?s=200&v=4"
+
+config_file: |
+  backend: sherpa-onnx
+  name: sherpa-onnx
+  parameters:
+    # Number of threads to use for inference
+    threads: 4
+    # Provider for ONNX Runtime (cpu, cuda, etc.)
+    library_search_path: "cpu"
+    # Decoding method (greedy_search, modified_beam_search)
+    language: "greedy_search"
+
+  # Example configuration for different model types:
+  # For Whisper models:
+  files:
+    - filename: "encoder.onnx"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/encoder.onnx"
+    - filename: "decoder.onnx"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/decoder.onnx"
+    - filename: "tokens.txt"
+      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tokens.txt"
+
+  # For Paraformer models:
+  # files:
+  #   - filename: "model.int8.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/resolve/main/model.int8.onnx"
+  #   - filename: "tokens.txt"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/resolve/main/tokens.txt"
+
+  # For Transducer models:
+  # files:
+  #   - filename: "encoder.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/encoder-epoch-99-avg-1.onnx"
+  #   - filename: "decoder.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/decoder-epoch-99-avg-1.onnx"
+  #   - filename: "joiner.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/joiner-epoch-99-avg-1.onnx"
+  #   - filename: "tokens.txt"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/tokens.txt"
