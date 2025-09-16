@@ -17,17 +17,17 @@ config_file: |
     # Decoding method (greedy_search, modified_beam_search)
     language: "greedy_search"
     # Path to the tokens file
-    tokens: "/var/lib/local-ai/models/sherpa-onnx/tiny.en-tokens.txt"
+    tokens: "/var/lib/local-ai/models/sherpa-onnx/tokens.txt"
 
   # Example configuration for different model types:
   # For Whisper models:
-  files:
-    - filename: "tiny.en-encoder.onnx"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-encoder.onnx"
-    - filename: "tiny.en-decoder.onnx"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-decoder.onnx"
-    - filename: "tiny.en-tokens.txt"
-      uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-tokens.txt"
+  # files:
+  #   - filename: "tiny.en-encoder.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-encoder.onnx"
+  #   - filename: "tiny.en-decoder.onnx"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-decoder.onnx"
+  #   - filename: "tiny.en-tokens.txt"
+  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-tokens.txt"
 
   # For Paraformer models:
   # files:
