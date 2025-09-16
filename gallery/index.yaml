@@ -21008,3 +21008,22 @@
     - filename: bark-small_weights-f16.bin
       uri: https://huggingface.co/Green-Sky/bark-ggml/resolve/main/bark-small_weights-f16.bin
       sha256: de1ece17e8319537b3a7909baebbd28affab23c942d5d57e648d622af4e2feaa
+
+- &sherpa-onnx
+  name: "sherpa-onnx"
+  icon: https://avatars.githubusercontent.com/u/99442120
+  url: github:M0Rf30/LocalAI/gallery/sherpa-onnx.yaml@feat/sherpa-onnx
+  license: apache-2.0
+  urls:
+    - https://github.com/k2-fsa/sherpa-onnx
+  description: |
+    Speech recognition with Next-gen Kaldi and ONNX Runtime.
+  overrides:
+    backend: sherpa-onnx
+  files:
+    - filename: encoder.onnx
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/encoder.onnx
+    - filename: decoder.onnx
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/decoder.onnx
+    - filename: tokens.txt
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tokens.txt
