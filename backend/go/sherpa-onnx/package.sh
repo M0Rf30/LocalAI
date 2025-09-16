@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Create the assets directory if it doesn't exist
-mkdir -p backend-assets
+CURDIR=$(dirname "$(realpath $0)")
+
+# Create the package directory if it doesn't exist
+mkdir -p $CURDIR/package
 
 # Check if the binary exists
 if [ ! -f "sherpa-onnx" ]; then
@@ -9,15 +11,17 @@ if [ ! -f "sherpa-onnx" ]; then
     exit 1
 fi
 
-# Copy the binary
-cp sherpa-onnx backend-assets/
+# Copy the binary to package directory
+cp sherpa-onnx $CURDIR/package/
 
 # Copy the library files if they exist
 if [ -d "backend-assets/lib" ]; then
-    # Create target directory if it doesn't exist
-    mkdir -p /tmp/localai/backend-assets/lib/ 2>/dev/null || true
-    # Copy library files
-    cp -r backend-assets/lib/* /tmp/localai/backend-assets/lib/ 2>/dev/null || true
+    mkdir -p $CURDIR/package/lib
+    cp -r backend-assets/lib/* $CURDIR/package/lib/
 fi
 
+# Copy run script
+cp -rfv run.sh $CURDIR/package/
+
 echo "Packaging complete"
+ls -liah $CURDIR/package/
