@@ -8,6 +8,8 @@ if [ ! -f "./sherpa-onnx" ]; then
 fi
 
 if [ -f "./sherpa-onnx" ]; then
+    # Set LD_LIBRARY_PATH to use packaged libraries
+    export LD_LIBRARY_PATH="$(dirname "$(realpath $0)")/lib:${LD_LIBRARY_PATH:-}"
     ./sherpa-onnx "$@"
 else
     echo "Failed to build sherpa-onnx backend"

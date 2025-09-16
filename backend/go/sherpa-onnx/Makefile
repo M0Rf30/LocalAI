@@ -1,7 +1,7 @@
 CURRENT_DIR=$(abspath ./)
 GOCMD=go
 
-ONNX_VERSION?=1.20.0
+ONNX_VERSION?=1.17.1
 ONNX_ARCH?=x64
 ONNX_OS?=linux
 
@@ -39,7 +39,26 @@ else
 	mv backend-assets/lib/libonnxruntime.so.$(ONNX_VERSION) backend-assets/lib/libonnxruntime.so.1
 endif
 
-sherpa-onnx: backend-assets/lib/libonnxruntime.so.1
+# Copy sherpa-onnx libraries from Go module cache
+backend-assets/lib/libsherpa-onnx-c-api.so:
+	@echo "Copying sherpa-onnx libraries from Go module cache"
+	mkdir -p backend-assets/lib
+	# Find the Go module cache path for sherpa-onnx-go-linux
+	if [ -z "$$GOPATH" ]; then \
+		GO_MOD_CACHE="$$HOME/go/pkg/mod"; \
+	else \
+		GO_MOD_CACHE="$$GOPATH/pkg/mod"; \
+	fi; \
+	SHERPA_LIB_DIR=$$(find "$$GO_MOD_CACHE"/github.com/k2-fsa/sherpa-onnx-go-linux* -name "libsherpa-onnx-c-api.so" -exec dirname {} \; 2>/dev/null | head -n 1); \
+	if [ -n "$$SHERPA_LIB_DIR" ]; then \
+		echo "Found sherpa-onnx libraries at: $$SHERPA_LIB_DIR"; \
+		cp -f "$$SHERPA_LIB_DIR"/* backend-assets/lib/; \
+		chmod 644 backend-assets/lib/*; \
+	else \
+		echo "Warning: sherpa-onnx libraries not found in Go module cache"; \
+	fi
+
+sherpa-onnx: backend-assets/lib/libonnxruntime.so.1 backend-assets/lib/libsherpa-onnx-c-api.so
 	CGO_LDFLAGS="$(CGO_LDFLAGS)" CPATH="$(CPATH):$(CURRENT_DIR)/sources/onnxruntime/include/" LIBRARY_PATH=$(CURRENT_DIR)/backend-assets/lib \
 	$(GOCMD) build -ldflags "$(LD_FLAGS)" -tags "$(GO_TAGS)" -o sherpa-onnx ./
 
