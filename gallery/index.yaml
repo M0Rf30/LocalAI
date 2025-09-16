@@ -21011,7 +21011,7 @@
 
 - &sherpa-onnx
   name: "sherpa-onnx"
-  icon: https://avatars.githubusercontent.com/u/99442120
+  icon: https://avatars.githubusercontent.com/u/71431748?s=200&v=4
   url: github:M0Rf30/LocalAI/gallery/sherpa-onnx.yaml@feat/sherpa-onnx
   license: apache-2.0
   urls:
@@ -21021,9 +21021,12 @@
   overrides:
     backend: sherpa-onnx
   files:
-    - filename: encoder.onnx
-      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/encoder.onnx
-    - filename: decoder.onnx
-      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/decoder.onnx
-    - filename: tokens.txt
-      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tokens.txt
+    - filename: tiny.en-encoder.onnx
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-encoder.onnx
+      sha256: dc7de696432d97a3d64387800b230ac69d18e5e4efea0eec0613209dd8b7b0c9
+    - filename: tiny.en-decoder.onnx
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-decoder.onnx
+      sha256: 54d5a5fd2a757175aeb70a837a8404fc9c31b659610724694f5a0e2c51715f94      
+    - filename: tiny.en-tokens.txt
+      uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-tokens.txt
+      sha256: 306cd27f03c1a714eca7108e03d66b7dc042abe8c258b44c199a7ed9838dd930
