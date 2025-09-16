@@ -21020,26 +21020,30 @@
   description: |
     Speech recognition with Next-gen Kaldi and ONNX Runtime.
   overrides:
-    backend: sherpa-onnx
+    parameters:
+      tokens: base-tokens.txt
   files:
-    - filename: encoder.onnx
+    - filename: base-encoder.onnx
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-encoder.onnx
       sha256: 5a6b87cb313993f6c9fefec9e7027556f6cb30becddf49655bee36c50ecc12d7
-    - filename: decoder.onnx
+    - filename: base-decoder.onnx
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-decoder.onnx
       sha256: 8a12c3f6ad65bb5b86d7e6eccc302378f20f9fb2df6cb10747c62895da7ac194
-    - filename: tokens.txt
+    - filename: base-tokens.txt
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-tokens.txt
       sha256: b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126
 - !!merge <<: *sherpa-onnx
   name: "sherpa-onnx-tiny"
+  overrides:
+    parameters:
+      tokens: tiny-tokens.txt
   files:
-    - filename: encoder.onnx
+    - filename: tiny-encoder.onnx
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-encoder.onnx
       sha256: 42c1d4cbf889632ba21ab6f0d4064c80209755f265ce5cd630db4a6793e7089c
-    - filename: decoder.onnx
+    - filename: tiny-decoder.onnx
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-decoder.onnx
       sha256: e144c07dc6b55cece24392811f2d934b97013811f5e677d1315d341a0a74a25d
-    - filename: tokens.txt
+    - filename: tiny-tokens.txt
       uri: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-tokens.txt
       sha256: b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126

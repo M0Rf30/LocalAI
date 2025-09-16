@@ -16,33 +16,3 @@ config_file: |
     library_search_path: "cpu"
     # Decoding method (greedy_search, modified_beam_search)
     language: "greedy_search"
-    # Path to the tokens file
-    tokens: "/var/lib/local-ai/models/sherpa-onnx/tokens.txt"
-
-  # Example configuration for different model types:
-  # For Whisper models:
-  # files:
-  #   - filename: "tiny.en-encoder.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-encoder.onnx"
-  #   - filename: "tiny.en-decoder.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-decoder.onnx"
-  #   - filename: "tiny.en-tokens.txt"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny.en/resolve/main/tiny.en-tokens.txt"
-
-  # For Paraformer models:
-  # files:
-  #   - filename: "model.int8.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/resolve/main/model.int8.onnx"
-  #   - filename: "tokens.txt"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-paraformer-zh-2023-09-14/resolve/main/tokens.txt"
-
-  # For Transducer models:
-  # files:
-  #   - filename: "encoder.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/encoder-epoch-99-avg-1.onnx"
-  #   - filename: "decoder.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/decoder-epoch-99-avg-1.onnx"
-  #   - filename: "joiner.onnx"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/joiner-epoch-99-avg-1.onnx"
-  #   - filename: "tokens.txt"
-  #     uri: "https://huggingface.co/csukuangfj/sherpa-onnx-zipformer-en-2023-06-26/resolve/main/tokens.txt"
