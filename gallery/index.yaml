@@ -23172,3 +23172,36 @@
     - filename: Maenad-70B.i1-Q4_K_M.gguf
       sha256: dd5615ba1ab4ce2a3614afd547e0457fc14c7182de0d2e5f80d84323ee53ec1f
       uri: huggingface://mradermacher/Maenad-70B-i1-GGUF/Maenad-70B.i1-Q4_K_M.gguf
+- &glm4vflash
+  name: "glm-4.6v-flash"
+  license: mit
+  tags:
+    - llm
+    - gguf
+    - gpu
+    - cpu
+    - text-to-text
+    - glm
+    - glm4
+    - glm4vflash
+  icon: https://cdn-avatars.huggingface.co/v1/production/uploads/62dc173789b4cf157d36ebee/i_pxzM2ZDo3Ub-BEgIkE9.png
+  urls:
+    - https://huggingface.co/unsloth/GLM-4.6V-Flash-GGUF
+  description: |
+    GLM-4.6V-Flash is the latest generation of high-speed, high-efficiency text generation models from Zhipu AI, building on the foundation of GLM-4 architecture. This model delivers significant improvements in inference speed, language understanding, and multilingual support while maintaining or enhancing the accuracy of its predecessors.
+
+    Key Features:
+
+    • **High-Speed Inference**: Optimized for rapid response generation with minimal latency
+    • **Enhanced Language Understanding**: Improved comprehension and reasoning capabilities
+    • **Multilingual Support**: Better performance across multiple languages
+    • **Efficient Architecture**: Designed for high-throughput deployment
+
+    This model represents Zhipu AI's commitment to pushing the boundaries of what's possible with language model efficiency and performance.
+  overrides:
+    parameters:
+      model: GLM-4.6V-Flash-Q4_K_M.gguf
+  files:
+    - filename: GLM-4.6V-Flash-Q4_K_M.gguf
+      uri: huggingface://unsloth/GLM-4.6V-Flash-GGUF/GLM-4.6V-Flash-Q4_K_M.gguf
+      sha256: 2e7a4e7682ac5085d9b237e0b4eead47071581c7f5523a29e547a80ef3e1439f
